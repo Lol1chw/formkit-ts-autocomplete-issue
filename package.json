@@ -9,14 +9,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.3.11",
-    "@formkit/vue": "latest",
     "@formkit/icons": "latest",
-    "tailwindcss": "latest",
+    "@formkit/vue": "latest",
     "autoprefixer": "latest",
-    "postcss": "latest"
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "vue": "^3.3.11"
   },
   "devDependencies": {
+    "@formkit/core": "^1.5.3",
+    "@formkit/inputs": "^1.5.3",
     "@vitejs/plugin-vue": "^4.5.2",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",

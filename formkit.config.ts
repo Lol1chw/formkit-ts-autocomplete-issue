@@ -4,7 +4,8 @@ import { DefaultConfigOptions } from '@formkit/vue'
 
 const config: DefaultConfigOptions = {
   icons: { ...genesisIcons },
-  config: { rootClasses }
+  config: { rootClasses },
+  inputs: { }
 }
 
 export default config

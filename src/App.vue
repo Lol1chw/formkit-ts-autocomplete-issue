@@ -1,8 +1,18 @@
 <script setup lang="ts">
+import { createInput } from '@formkit/vue';
+import MyRadio from './components/MyRadio.vue';
+
+import type { Options } from './types/type';
 async function submit() {
   await new Promise(r => setTimeout(r, 1000))
   alert('Submitted! 🎉')
 }
+
+const myRadio = createInput<{type: 'myRadio'}>(MyRadio, {
+  props: ['myOptions']
+})
+
+const options: Options[] = [{ title: '1' }, { title: '2' }]
 </script>
 
 <template>
@@ -40,12 +50,19 @@ async function submit() {
         }"
         validation="required|min:2"
       />
-      
+
       <FormKit
         type="checkbox"
         name="agree"
         label="I agree FormKit is the best form authoring framework."
       />
+
+      <FormKit
+      :type="myRadio"
+      name="myRadio"
+      :myOptions="options"
+      />
+
       <pre class="font-mono text-sm p-4 bg-slate-100 mb-4">{{ value }}</pre>
     </FormKit>
   </div>
